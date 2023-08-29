@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9999ff">
+
+    <ImageView
+        android:id="@+id/songImage"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_song_thumbnail" />
+
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songImage"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="Title Song"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp" />
+
+    <TextView
+        android:id="@+id/timingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="15dp"
+        android:text="00:00 / 00:00"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/playbackControlsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/shuffleButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Heart"
+            android:src="@drawable/shuffle" />
+
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Previous"
+            android:src="@drawable/previous" />
+
+        <!-- Play/Pause Button -->
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Play/Pause"
+            android:src="@drawable/pause" />
+
+        <!-- Next Button -->
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Next"
+            android:src="@drawable/next" />
+
+        <ImageButton
+            android:id="@+id/heartButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Heart"
+            android:src="@drawable/heart" />
+    </LinearLayout>
+
+</RelativeLayout>
